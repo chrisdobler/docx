@@ -41,7 +41,14 @@ module Docx
       }
     end
 
+    def object
+      return @doc
+    end
 
+    def raw_data
+      @document_xml
+    end
+    
     # With no associated block, Docx::Document.open is a synonym for Docx::Document.new. If the optional code block is given, it will be passed the opened +docx+ file as an argument and the Docx::Document oject will automatically be closed when the block terminates. The values of the block will be returned from Docx::Document.open.
     # call-seq:
     #   open(filepath) => file
